@@ -73,7 +73,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je focus:** surface en als ik tijd overheb responsive
 
-**Je opdracht:** <https://www.amnesty.nl>
+**Je opdracht:** <https://babsluidinga.github.io/blokweb/>
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
