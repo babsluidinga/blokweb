@@ -38,7 +38,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+Heel stom niet tussentijds geupload via github. Toen was ik ineens mijn html bestand kwijt, heb hier van geleerd en nu upload ik elke keer zodra ik iets heb veranderd aan mijn site, zodat ik dit soort situaties kan voorkomen in de toekomst.. :)
 
 **Screenshot(s):**
 
@@ -56,7 +56,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Verslag van meeting
 
--na afloop snel uitkomsten vastleggen-
+iedereen redelijk ver gekomen, en het lijkt ook echt wat te worden, alleen soms is de html slordig. 
 
 
 
