@@ -1,0 +1,663 @@
+:root {
+    --lightgreen: #e2e0ce;
+    --numbers: #004d61;
+    --greenfooter: #78786f;
+    --hover: #5d8b34;
+    --grey: #4a4a4a;
+    --text: #35352a;
+}
+
+@font-face {
+    font-family: 'wwf';
+    src: url(../fonts/wwf-webfont.woff) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+header {
+    background-image: url(../img/bosjebomen_gevuld.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 37em;
+    box-shadow: inset 2px -350px 90px -200px rgba(0, 0, 0, 0.75);
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 6em;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0px 45px 180px -45px rgba(0, 0, 0, 0.75);
+}
+
+header nav img {
+    height: 6em;
+    width: 6em;
+}
+
+/*menu button*/
+header nav button {
+    background: none;
+    border: none;
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 7em;
+}
+
+header nav button:focus {
+    border: none;
+    outline: none;
+}
+
+header nav p {
+    text-transform: uppercase;
+    position: absolute;
+    top: 2.5em;
+}
+
+
+header nav div span {
+    display: block;
+    background-color: black;
+    width: 2em;
+    height: .25em;
+    position: absolute;
+    right: 1.5em;
+    transition: .5s;
+}
+
+header nav div span:first-of-type {
+    top: 2.3em;
+}
+
+
+header nav div span:nth-of-type(2) {
+    top: 3em;
+}
+
+header nav div span:last-of-type {
+    top: 3.7em;
+}
+
+/*menu button verander*/
+
+header nav button.verander div span:first-of-type {
+    transform: rotateZ(45deg);
+    transform-origin: left;
+}
+
+header nav button.verander div span:nth-of-type(2) {
+    display: none;
+}
+
+header nav button.verander div span:last-of-type {
+    transform: rotateZ(-45deg);
+    transform-origin: left;
+}
+
+/*uitklapmenu*/
+
+header nav section {
+    position: absolute;
+    height: calc(100vh - 6em);
+    width: 100vw;
+    background-color: white;
+    top: 6em;
+    left: -100vw;
+    transition: .5s ease-in-out;
+}
+
+header nav section.open {
+    left: 0;
+}
+
+header nav section input {
+    width: 100vw;
+    background-color: #f9f9f8;
+    border: none;
+    padding: 1em;
+    color: black;
+    font-size: 1.02em;
+    font-weight: 300;
+
+}
+
+header nav section input:focus {
+    outline: none;
+}
+
+header nav section input::placeholder {
+    color: black;
+    letter-spacing: .1em
+}
+
+header nav section ul:first-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: .7em;
+}
+
+header nav section ul:first-of-type li {
+    list-style-type: none;
+}
+
+header nav section ul:first-of-type li a {
+    display: block;
+    text-align: center;
+    width: 42vw;
+    padding: .5em 0;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: .75em;
+    border-radius: 1em;
+    letter-spacing: .1em;
+    font-weight: 300;
+}
+
+header nav section ul:first-of-type li:first-of-type a:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+header nav section ul:first-of-type li:last-of-type a {
+    background: #e77b1f;
+    color: white;
+}
+
+header nav section ul:nth-of-type(2) li {
+    list-style-type: none;
+}
+
+header nav section ul:nth-of-type(2) li a {
+    color: black;
+    text-decoration: none;
+    padding: 1em 1em 1em 2em;
+    display: block;
+    color: var(--text);
+    font-weight: 300;
+    letter-spacing: .05em;
+    font-size: .99em;
+}
+
+header nav section ul:nth-of-type(2) li a:hover {
+    background: rgba(0, 0, 0, 0.2);
+
+}
+
+header nav section ul:nth-of-type(2) li a span {
+    position: absolute;
+    right: 5vw;
+    font-weight: 500;
+}
+
+/*eind uitklapmenu*/
+
+header img.headerbottom {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -.1em;
+    background-color: none;
+}
+
+header article {
+    position: absolute;
+    top: 18vh;
+    padding: 1em;
+}
+
+header article h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-family: 'wwf', serif;
+    font-weight: 300;
+    margin-bottom: -1.3em;
+    letter-spacing: .1em;
+}
+
+header article h1 {
+    color: white;
+    font-family: 'wwf', serif;
+    font-weight: 300;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+header article p {
+    color: white;
+    margin-top: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+header article a {
+    color: white;
+    font-size: .9em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5em 2em;
+    border: .1em solid white;
+    border-radius: 3em;
+    border-radius: 3em;
+    position: relative;
+    top: 3em;
+    transition: .2s;
+}
+
+header article a:hover {
+    background-color: white;
+    color: var(--grey);
+}
+
+/*main*/
+
+main section {
+    padding: 1em;
+}
+
+main section h3 {
+    font-family: 'wwf', serif;
+    font-size: 2.5em;
+    color: var(--text);
+    font-weight: 300;
+    letter-spacing: .05em;
+    padding: 1em auto;
+}
+
+main section p {
+    color: var(--text);
+    font-weight: 300;
+    line-height: 1.5em;
+    padding-top: 1em
+}
+
+main section h2 {
+    font-family: 'wwf', serif;
+    font-size: 3em;
+    color: var(--text);
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1em 0;
+    letter-spacing: .015em
+}
+
+main section:nth-of-type(3) ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 3em;
+}
+
+main section:nth-of-type(3) ul li {
+    text-align: center;
+}
+
+main section:nth-of-type(3) ul li a {
+    background-image: linear-gradient(-270deg, #b1be47, #5d8b34, #b1be47);
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    display: block;
+    padding: 1.3em;
+    margin: .5em;
+    border-radius: 3em;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: .9em;
+    transition: .5s;
+}
+
+main section:nth-of-type(3) ul li a:hover {
+    background-position: 99% 50%;
+}
+
+main section:nth-of-type(4) {
+    position: relative;
+    background-image: url(../img/fight-for-your-world.png);
+    background-size: cover;
+    padding: 0;
+    height: 60vh;
+}
+
+main section:nth-of-type(4) h2 {
+    color: white;
+    padding: 1em;
+}
+
+main section:nth-of-type(4) p {
+    color: white;
+    text-align: center;
+    padding: 0 1em 2em;
+    line-height: 1.5em;
+}
+
+main section:nth-of-type(4) a {
+    position: absolute;
+    background-image: linear-gradient(-270deg, #b1be47, #5d8b34, #b1be47);
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    padding: 1.5em 2em;
+    border-radius: 3em;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: .9em;
+    transition: .5s;
+    text-align: center;
+    bottom: 5em;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+main section:nth-of-type(4) a:hover {
+    background-position: 99% 50%;
+}
+
+main section:nth-of-type(5) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main section:nth-of-type(5) h2 {
+    color: var(--numbers);
+
+}
+
+main section:nth-of-type(5) article div {
+    display: inline-block;
+    padding: 0em 2.5em;
+    border: .1em solid #e2e0ce;
+    border-radius: 22% 78% 33% 67% / 54% 40% 60% 46%;
+    transform: rotate(-15deg) translateX(-50%);
+    position: relative;
+    left: 50%;
+}
+
+main section:nth-of-type(5) article div h2 {
+    transform: rotate(15deg);
+    text-align: center;
+    letter-spacing: .05em;
+}
+
+main section:nth-of-type(5) article p {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .8em;
+    text-align: center;
+    padding: 2em;
+    color: var(--grey);
+}
+
+main section:nth-of-type(5) a {
+    display: block;
+    width: 13em;
+    padding: 1.7em;
+    border: .1em solid #e2e0ce;
+    text-align: center;
+    color: var(--grey);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    border-radius: 3em;
+    margin: 2em auto;
+    transition: .5s;
+}
+
+main section:nth-of-type(5) a:hover {
+    background-color: #f6f5f2;
+}
+
+main ul:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+    padding: 1em;
+}
+
+main ul:nth-of-type(2) li a div:first-of-type {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    top: 100%;
+    transition: .2s;
+}
+
+main ul:nth-of-type(2) li a h4 {
+    position: relative;
+    top: -40%;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 1em;
+    transition: .2s;
+}
+
+main ul:nth-of-type(2) li a p {
+    display: block;
+    width: 15em;
+    font-size: .8em;
+    position: relative;
+    top: 0;
+    margin: 1em;
+    transition: .15s;
+    font-weight: 300;
+}
+
+main ul:nth-of-type(2) li a {
+    display: block;
+    height: 20vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    color: white;
+    line-height: 1.5em;
+    box-shadow: inset 0px 0px 180px -45px rgba(0, 0, 0, 0.75);
+}
+
+main ul:nth-of-type(2) li:nth-of-type(1) a {
+    background-image: url(../img/kirsten-caribisch-nl.jpg);
+}
+
+main ul:nth-of-type(2) li:nth-of-type(2) a {
+    background-image: url(../img/sneeuwluipaard.jpg);
+    background-position: 50% 25%;
+}
+
+main ul:nth-of-type(2) li:nth-of-type(3) a {
+    background-image: url(../img/orang-oetan-baby.jpg);
+}
+
+/*pijltje*/
+main ul:nth-of-type(2) li a div:last-of-type {
+    display: block;
+    width: 2em;
+    height: 2em;
+    position: relative;
+    left: 85%;
+    top: 0;
+    transition: .15s;
+}
+
+main ul:nth-of-type(2) li a div:last-of-type span {
+    width: 1em;
+    height: .2em;
+    display: block;
+    background-color: lightgray;
+    border-radius: .4em;
+}
+
+main ul:nth-of-type(2) li a div:last-of-type span:first-of-type {
+    position: relative;
+    top: .825em;
+    transform: rotateZ(45deg);
+}
+
+main ul:nth-of-type(2) li a div:last-of-type span:last-of-type {
+    position: relative;
+    top: 1.2em;
+    transform: rotateZ(-45deg);
+}
+
+
+
+/*hover events*/
+main ul:nth-of-type(2) li a:hover div {
+    top: 0;
+}
+
+main ul:nth-of-type(2) li a:hover h4 {
+    top: -100%;
+}
+
+main ul:nth-of-type(2) li a:hover p {
+    top: -105%;
+}
+
+main ul:nth-of-type(2) li a:hover div:last-of-type {
+    top: -140%;
+}
+
+/*resultaten en updates section*/
+main section:nth-of-type(6) p {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 1em auto 3em
+}
+
+main section:nth-of-type(6) article a {
+    display: block;
+    background-color: #f6f5f2;
+    width: 100%;
+    height: 15vh;
+    margin: 1em auto;
+    border-radius: .5em;
+    text-decoration: none;
+}
+
+main section:nth-of-type(6) article a h4 {
+    color: var(--text);
+    font-weight: 400;
+    display: block;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    top: -100%;
+    padding: 1em;
+}
+
+main section:nth-of-type(6) article a div.background-img {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    border-radius: .5em 0 0 .5em;
+    background-size: 100%;
+    background-position: center;
+    transition: .5s;
+
+}
+
+main section:nth-of-type(6) article:nth-of-type(2) a div.background-img {
+    background-image: url(../img/bison-transport-2.jpg);
+}
+
+main section:nth-of-type(6) article:nth-of-type(3) a div.background-img {
+    background-image: url(../img/koala-draagt-baby.jpg);
+}
+
+main section:nth-of-type(6) article a p {
+    font-size: .7em;
+    text-transform: uppercase;
+    color: var(--hover);
+    font-weight: 300;
+    position: relative;
+    left: 50%;
+    text-align: left;
+    position: relative;
+    top: -110%;
+    left: 53%;
+}
+
+main section:nth-of-type(6) article:first-of-type a {
+    height: 27vh;
+    background-image: url(../img/valbona-saimir-kalbaj-1.jpg);
+    background-size: 100%;
+    background-position: 50% 75%;
+    color: white;
+    box-shadow: inset 0px 0px 180px -45px rgba(0, 0, 0, 0.75);
+    transition: .5s;
+}
+
+main section:nth-of-type(6) article:first-of-type a h4 {
+    color: white;
+    font-size: 1.7em;
+    padding: 2em 1em;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+main section:nth-of-type(6) article:first-of-type a p {
+    color: white;
+    top: -20%;
+    left: 2.5em;
+}
+
+a.meer {
+    display: block;
+    width: 13em;
+    padding: 1.7em;
+    border: .1em solid #e2e0ce;
+    text-align: center;
+    color: var(--grey);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    border-radius: 3em;
+    margin: 2em auto;
+    transition: .5s;
+}
+
+/*hover effects*/
+main section:nth-of-type(6) article:first-of-type a:hover {
+    background-size: 125%
+}
+
+main section:nth-of-type(6) article a:hover div.background-img {
+    background-size: 125%;
+}
+
+a.meer:hover {
+    background-color: #f6f5f2;
+}
