@@ -38,7 +38,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
-Heel stom niet tussentijds geupload via github. Toen was ik ineens mijn html bestand kwijt, heb hier van geleerd en nu upload ik elke keer zodra ik iets heb veranderd aan mijn site, zodat ik dit soort situaties kan voorkomen in de toekomst.. :)
+-dit ging goed & dit was lastig-
 
 **Screenshot(s):**
 
@@ -56,7 +56,7 @@ Heel stom niet tussentijds geupload via github. Toen was ik ineens mijn html bes
 
 ### Verslag van meeting
 
-iedereen redelijk ver gekomen, en het lijkt ook echt wat te worden, alleen soms is de html slordig. 
+-na afloop snel uitkomsten vastleggen-
 
 
 
@@ -73,7 +73,7 @@ iedereen redelijk ver gekomen, en het lijkt ook echt wat te worden, alleen soms 
 
 **Je focus:** surface en als ik tijd overheb responsive
 
-**Je opdracht:** <https://babsluidinga.github.io/blokweb/>
+**Je opdracht:** <https://www.amnesty.nl>
 
 **Screenshot(s) van de eerste pagina (small screen):**
 

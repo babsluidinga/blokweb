@@ -949,7 +949,7 @@ main.bosjeBomen section {
 main.bosjeBomen section div {
     display: flex;
     flex-direction: row;
-    overflow-x: hidden !important;
+    overflow-x: scroll !important;
     width: 100vw;
     padding: 1em
 }
