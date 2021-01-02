@@ -262,6 +262,7 @@ header article {
     position: absolute;
     top: 18vh;
     padding: 1em;
+    max-width: 35em;
 }
 
 header article h2 {
@@ -387,7 +388,8 @@ main section h2 {
 main section:nth-of-type(3) ul {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 3em;
 }
@@ -402,13 +404,14 @@ main section:nth-of-type(3) ul li a {
     background-size: 300% 300%;
     display: block;
     padding: 1.3em;
-    margin: .5em;
+    margin: 1em;
     border-radius: 3em;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
     font-size: .9em;
     transition: .5s;
+    width: 19em;
 }
 
 main section:nth-of-type(3) ul li a:hover {
@@ -420,7 +423,7 @@ main section:nth-of-type(4) {
     background-image: url(../img/fight-for-your-world.png);
     background-size: cover;
     padding: 0;
-    height: 60vh;
+    height: 35em;
 }
 
 main section:nth-of-type(4) h2 {
@@ -433,6 +436,9 @@ main section:nth-of-type(4) p {
     text-align: center;
     padding: 0 1em 2em;
     line-height: 1.5em;
+    max-width: 40em;
+    display: block;
+    margin: auto;
 }
 
 main section:nth-of-type(4) a {
@@ -514,7 +520,8 @@ main section:nth-of-type(5) a:hover {
 
 main ul:nth-of-type(2) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     list-style-type: none;
     justify-content: center;
     padding: 1em;
@@ -554,6 +561,8 @@ main ul:nth-of-type(2) li a p {
 main ul:nth-of-type(2) li a {
     display: block;
     height: 20vh;
+    width: 90vw;
+    max-width: 30em;
     overflow: hidden;
     background-size: cover;
     background-position: center;
@@ -627,17 +636,23 @@ main ul:nth-of-type(2) li a:hover div:last-of-type {
 }
 
 /*resultaten en updates section*/
+main section:nth-of-type(6) {
+    max-width: 40em;
+    display: block;
+    margin: auto;
+}
+
 main section:nth-of-type(6) p {
     text-align: center;
     font-size: 1.1em;
-    margin: 1em auto 3em
+    margin: 1em auto 3em;
 }
 
 main section:nth-of-type(6) article a {
     display: block;
     background-color: #f6f5f2;
     width: 100%;
-    height: 15vh;
+    height: 8em;
     margin: 1em auto;
     border-radius: .5em;
     text-decoration: none;
@@ -652,6 +667,7 @@ main section:nth-of-type(6) article a h4 {
     left: 50%;
     top: -100%;
     padding: 1em;
+    font-size: .8em
 }
 
 main section:nth-of-type(6) article a div.background-img {
@@ -659,7 +675,7 @@ main section:nth-of-type(6) article a div.background-img {
     height: 100%;
     display: inline-block;
     border-radius: .5em 0 0 .5em;
-    background-size: 100%;
+    background-size: 140%;
     background-position: center;
     transition: .5s;
 
@@ -680,7 +696,7 @@ main section:nth-of-type(6) article a p {
     font-weight: 300;
     text-align: left;
     position: relative;
-    bottom: 11em;
+    bottom: 9em;
     left: 53%;
     display: block;
     width: 50%;
@@ -688,13 +704,13 @@ main section:nth-of-type(6) article a p {
 }
 
 main section:nth-of-type(6) article:last-of-type a p {
-    bottom: 13em
+    bottom: 10em;
 }
 
 main section:nth-of-type(6) article:first-of-type a {
     height: 27vh;
     background-image: url(../img/valbona-saimir-kalbaj-1.jpg);
-    background-size: 100%;
+    background-size: 115%;
     background-position: 50% 75%;
     color: white;
     box-shadow: inset 0px 0px 180px -45px rgba(0, 0, 0, 0.75);
@@ -703,7 +719,7 @@ main section:nth-of-type(6) article:first-of-type a {
 
 main section:nth-of-type(6) article:first-of-type a h4 {
     color: white;
-    font-size: 1.7em;
+    font-size: 1em;
     padding: 2em 1em;
     width: 100%;
     top: 0;
@@ -733,11 +749,11 @@ a.meer {
 
 /*hover effects*/
 main section:nth-of-type(6) article:first-of-type a:hover {
-    background-size: 125%
+    background-size: 110%
 }
 
 main section:nth-of-type(6) article a:hover div.background-img {
-    background-size: 125%;
+    background-size: 130%;
 }
 
 a.meer:hover {
@@ -773,7 +789,7 @@ footer ul.social li a {
     background: transparent;
     border: .05em solid var(--lightgreen);
     color: var(--text);
-    font-size: 1.5em;
+    font-size: 1.2em;
 
 }
 
@@ -857,7 +873,7 @@ footer section ul {
 footer section ul li img {
     margin: 0;
     display: block;
-    width: 4em
+    width: 3em
 }
 
 footer section ul li:last-of-type img {
@@ -898,7 +914,7 @@ footer section:last-of-type h6 {
 
 /*bosje bomen detailpagina*/
 header.bosjeBomen {
-    height: 90vh;
+    height: 50em;
     box-shadow: inset 2px -350px 90px -200px rgba(32, 48, 36, 1);
 
 }
@@ -965,7 +981,7 @@ main.bosjeBomen section div article h3 {
 
 main.bosjeBomen section div article {
     display: block;
-    width: 26em;
+    width: 19em;
     background: white;
     margin: 1em;
     border-radius: 1em;
@@ -976,6 +992,7 @@ main.bosjeBomen section div article h3 {
     margin: .5em;
     font-size: 2em;
     letter-spacing: 0;
+    text-transform: none;
 }
 
 main.bosjeBomen section div article img {
@@ -983,6 +1000,12 @@ main.bosjeBomen section div article img {
     width: 90%;
     margin: 2em auto 0em auto;
 }
+
+main.bosjeBomen section div article p {
+    color: var(--text);
+    text-align: left;
+}
+
 
 main.bosjeBomen section div article p:nth-of-type(1) {
     padding: 0;
@@ -993,7 +1016,7 @@ main.bosjeBomen section div article p:nth-of-type(1) {
 
 main.bosjeBomen section div article a {
     display: block;
-    margin: 2em auto;
+    margin: 2em auto 0;
     text-align: center;
     padding: 1em;
     width: 9em;
@@ -1021,7 +1044,248 @@ main.bosjeBomen section div article a:hover {
 }
 
 main.bosjeBomen section div article p:nth-of-type(2) {
-    margin: 1em 1em 1em 3em;
+    margin: -1em 1em 3em 4em;
 }
 
-main.bosjeBomen section div article div::before {}
+main.bosjeBomen section div article div:nth-of-type(2) {
+    position: relative;
+    top: 2em;
+}
+
+main.bosjeBomen section div article div:nth-of-type(2)::before {
+    content: "\e801";
+    font-family: 'fontello';
+    color: #5cd05b;
+}
+
+main.bosjeBomen section div article div:nth-child(3) {
+    display: block;
+    width: 5em;
+    height: 5em;
+    background-color: #f17030;
+    position: relative;
+    bottom: 12em;
+    left: 14em;
+    border-radius: 100%;
+}
+
+main.bosjeBomen section div article div:nth-child(3) p {
+    color: white;
+    font-family: 'wwf';
+    text-align: center;
+    position: relative;
+    top: 1.4em;
+    right: .7em;
+}
+
+main.bosjeBomen section:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main.bosjeBomen section:nth-of-type(2) h3 {
+    margin-top: 2em;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1em
+}
+
+main.bosjeBomen section:nth-of-type(2) p {
+    color: white;
+    text-align: center;
+    padding: 1em
+}
+
+main.bosjeBomen section:nth-of-type(2) article h4 {
+    color: #b0bfc3;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: .9em;
+    text-align: center;
+    border-bottom: .1em solid rgba(0, 0, 0, 0.28);
+    padding: 1em;
+    margin: 3em 1em;
+    display: block;
+    width: 100%
+}
+
+main.bosjeBomen section:nth-of-type(2) div {
+    display: block;
+    max-width: 40em;
+    margin: auto
+}
+
+main.bosjeBomen section:nth-of-type(2) div:first-child {
+    display: block;
+    width: 100%;
+    max-width: 100%
+}
+
+main.bosjeBomen section:nth-of-type(2) article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 40em;
+
+}
+
+main.bosjeBomen section:nth-of-type(2) article img {
+    display: block;
+    margin: auto;
+    width: 90vw;
+    max-width: 20em
+}
+
+main.bosjeBomen section h3 {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'wwf', serif;
+}
+
+main.bosjeBomen section p {
+    color: white;
+    text-align: center;
+    font-size: .9em
+}
+
+main.bosjeBomen div section:nth-of-type(1),
+main.bosjeBomen div section:nth-of-type(2),
+main.bosjeBomen div section:nth-of-type(3) {
+    background-size: cover;
+    background-position: center;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    z-index: 1;
+    top: 6em;
+    margin-top: -15em;
+    height: 60em;
+    overflow: hidden;
+}
+
+main.bosjeBomen div section:nth-of-type(1) div,
+main.bosjeBomen div section:nth-of-type(2) div,
+main.bosjeBomen div section:nth-of-type(3) div {
+    display: block;
+    max-width: 90%;
+    margin: 1em auto 0;
+    max-width: 40em
+}
+
+main.bosjeBomen div section:nth-of-type(1) {
+    background-image: url(../img/storyblock_bosjebomen_1_maakkennis_ztekst.jpeg);
+}
+
+
+
+main.bosjeBomen div section:nth-of-type(2) {
+    background-image: url(../img/storyblock_bosjebomen_2_83_ztekst.jpeg);
+    height: 60em;
+}
+
+main.bosjeBomen div section:nth-of-type(2) div {
+    margin: -8em auto auto;
+}
+
+main.bosjeBomen div section:nth-of-type(3) {
+    background-image: url(../img/storyblock_bosjebomen_3_helpmee_ztekst.jpeg);
+    height: 40em;
+}
+
+main.bosjeBomen section:nth-child(4) {
+    margin: 25em auto -11em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main.bosjeBomen section:nth-child(4) div {
+    display: block;
+    max-width: 30em;
+    margin: 3em auto;
+}
+
+main.bosjeBomen section:nth-child(4) video {
+    display: block;
+    margin: auto;
+    border-radius: .5em;
+    width: 90vw;
+    max-width: 30em;
+}
+
+main.bosjeBomen section:nth-child(4) h3,
+main.bosjeBomen section:nth-child(4) p {
+    text-align: left;
+}
+
+main.bosjeBomen section:nth-child(4) a {
+    color: var(--hover);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    margin: 3em auto;
+    font-size: .9em
+}
+
+@media screen and (min-width: 1024px) {
+
+    header {
+        height: 108vh;
+    }
+
+    header article {
+        border-radius: 22% 78% 33% 67% / 54% 40% 60% 46%;
+        border: .1em solid white;
+        padding: 5em 5em 10em;
+        top: 11em;
+        margin: 3em
+    }
+
+
+    main.home section:nth-of-type(1),
+    main.home section:nth-of-type(2) {
+        max-width: 50em;
+        margin: auto;
+    }
+
+    main ul:nth-of-type(2) li a {
+        width: 25vw;
+        height: 15em;
+        background-position: center !important;
+    }
+
+    main ul:nth-of-type(2) li:nth-of-type(2) a {
+        width: 35vw;
+    }
+
+    main.bosjeBomen section:first-child {
+        top: -2em;
+    }
+
+    main.bosjeBomen section:nth-of-type(2) {
+        top: 0em;
+        margin-bottom: 20em
+    }
+
+    main.bosjeBomen section div:first-of-type {
+        overflow: hidden !important;
+        justify-content: center;
+    }
+
+    main.bosjeBomen section:nth-of-type(2) {
+        justify-content: center;
+    }
+
+    main.bosjeBomen section:nth-of-type(2) div {
+        width: 15em;
+    }
+
+    main.bosjeBomen section:nth-of-type(2) div img {
+        width: 12em;
+        height: 12em;
+    }
+}
