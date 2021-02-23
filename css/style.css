@@ -71,11 +71,6 @@ header nav button {
     cursor: pointer;
 }
 
-header nav button:focus {
-    border: none;
-    outline: none;
-}
-
 header nav button p {
     text-transform: uppercase;
     position: absolute;
@@ -126,8 +121,8 @@ header nav button.verander div span:last-of-type {
 /*scroll animatie*/
 
 header nav.solid {
-    box-shadow: 0px 45px 180px -45px rgba(0, 0, 0, 0.75);
-    background-color: white;
+    box-shadow: 0px 45px 180px -45px rgba(0, 0, 0, 0.75) !important;
+    background-color: white !important;
 }
 
 header nav.solid button p {
@@ -222,11 +217,13 @@ header nav section ul:first-of-type li:last-of-type a {
     color: white;
 }
 
-header nav section ul:nth-of-type(2) li {
+header nav section ul:nth-of-type(2) li,
+header nav section ul:nth-of-type(3) li {
     list-style-type: none;
 }
 
-header nav section ul:nth-of-type(2) li a {
+header nav section ul:nth-of-type(2) li a,
+header nav section ul:nth-of-type(3) li a {
     color: black;
     text-decoration: none;
     padding: 1em 1em 1em 2em;
@@ -237,7 +234,8 @@ header nav section ul:nth-of-type(2) li a {
     font-size: .99em;
 }
 
-header nav section ul:nth-of-type(2) li a:hover {
+header nav section ul:nth-of-type(2) li a:hover,
+header nav section ul:nth-of-type(3) li a:hover {
     background: rgba(0, 0, 0, 0.2);
 
 }
@@ -322,6 +320,7 @@ ul.social {
     list-style-type: none;
     justify-content: flex-end;
     padding: 1em;
+    margin: 3em
 }
 
 ul.social li a {
@@ -403,15 +402,16 @@ main section:nth-of-type(3) ul li a {
     background-position: 1% 50%;
     background-size: 300% 300%;
     display: block;
-    padding: 1.3em;
-    margin: 1em;
+    padding: 1.5em;
+    margin: 1em 2em;
     border-radius: 3em;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
     font-size: .9em;
     transition: .5s;
-    width: 19em;
+    width: 90vw;
+    max-width: 25em
 }
 
 main section:nth-of-type(3) ul li a:hover {
@@ -465,13 +465,20 @@ main section:nth-of-type(4) a:hover {
 
 main section:nth-of-type(5) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    max-width: 75em;
+    margin: auto;
 }
 
 main section:nth-of-type(5) h2 {
     color: var(--numbers);
+    margin: 1.5em 3em;
+}
 
+main section:nth-of-type(5) article {
+    margin: 3em
 }
 
 main section:nth-of-type(5) article div {
@@ -488,6 +495,7 @@ main section:nth-of-type(5) article div h2 {
     transform: rotate(15deg);
     text-align: center;
     letter-spacing: .05em;
+    margin: 0;
 }
 
 main section:nth-of-type(5) article p {
@@ -499,7 +507,7 @@ main section:nth-of-type(5) article p {
     color: var(--grey);
 }
 
-main section:nth-of-type(5) a {
+main a:nth-child(7) {
     display: block;
     width: 13em;
     padding: 1.7em;
@@ -524,7 +532,8 @@ main ul:nth-of-type(2) {
     flex-wrap: wrap;
     list-style-type: none;
     justify-content: center;
-    padding: 1em;
+    max-width: 75em;
+    margin: auto;
 }
 
 main ul:nth-of-type(2) li a div:first-of-type {
@@ -562,7 +571,7 @@ main ul:nth-of-type(2) li a {
     display: block;
     height: 20vh;
     width: 90vw;
-    max-width: 30em;
+    max-width: 25em;
     overflow: hidden;
     background-size: cover;
     background-position: center;
@@ -813,14 +822,14 @@ footer ul.social li:last-of-type a::before {
     content: '\e80f'
 }
 
-footer ul:nth-of-type(2) {
+footer div ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     margin-top: 3em;
 }
 
-footer ul:nth-of-type(2) li a {
+footer div ul li a {
     display: block;
     padding: 1em 0;
     text-decoration: none;
@@ -828,19 +837,19 @@ footer ul:nth-of-type(2) li a {
     letter-spacing: .05em
 }
 
-footer ul:nth-of-type(2) li {
+footer div ul li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 0.05em solid var(--lightgreen);
 }
 
-footer ul:nth-of-type(2) li:hover a,
-footer ul:nth-of-type(2) li:hover span {
+footer div ul li:hover a,
+footer div ul li:hover span {
     color: var(--hover);
 }
 
-footer ul:nth-of-type(2) li span {
+footer div ul li span {
     position: relative;
     top: 1.1em;
     right: 2em;
@@ -967,7 +976,7 @@ main.bosjeBomen section div {
     flex-direction: row;
     overflow-x: scroll !important;
     width: 100vw;
-    padding: 1em
+    padding: 1em;
 }
 
 main.bosjeBomen section h2,
@@ -1231,10 +1240,308 @@ main.bosjeBomen section:nth-child(4) a {
     font-size: .9em
 }
 
+
+/*SVG-tjes*/
+
+svg {
+    display: block;
+    width: 20em;
+    margin: auto;
+}
+
+article:first-of-type svg:first-of-type .cls-1 {
+    fill: #fff;
+}
+
+article:first-of-type svg:first-of-type .cls-2 {
+    fill: #a3ba9a;
+}
+
+article:first-of-type svg:first-of-type .cls-3 {
+    fill: #262223;
+}
+
+article:first-of-type svg:first-of-type .cls-4 {
+    fill: #aec2a6;
+}
+
+article:first-of-type svg:first-of-type .cls-5 {
+    fill: #a9bfa1;
+}
+
+article:first-of-type div:nth-of-type(1) svg .cls-6 {
+    stroke: #e6ebe3;
+    stroke-width: .2em;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+article:first-of-type div:nth-of-type(2) svg .cls-1 {
+    fill: #fff;
+}
+
+
+article:first-of-type div:nth-of-type(2) svg .cls-2 {
+    fill: #a3ba9a;
+}
+
+article:first-of-type div:nth-of-type(2) svg .cls-3 {
+    fill: #2e2a2b;
+}
+
+article:first-of-type div:nth-of-type(2) svg .cls-4 {
+    stroke: #e6ebe3;
+    stroke-width: .2em;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+article:first-of-type div:nth-of-type(2) svg .cls-5 {
+    stroke: #e6ebe3;
+    stroke-width: .2em;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+article:first-of-type div:nth-of-type(2) svg .cls-6 {
+    stroke: #e6ebe3;
+    stroke-width: .2em;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+article:first-of-type div:nth-of-type(2) svg .cls-7 {
+    stroke: #e6ebe3;
+    stroke-width: .2em;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+article:first-of-type div:nth-of-type(2) svg .cls-8 {
+    stroke: #e6ebe3;
+    stroke-width: .2em;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+article:nth-of-type(2) div:nth-of-type(1) svg .cls-1 {
+    fill: #fff;
+}
+
+article:nth-of-type(2) div:nth-of-type(1) svg .cls-2 {
+    fill: #7b939f;
+}
+
+article:nth-of-type(2) div:nth-of-type(1) svg .cls-3 {
+    fill: #2b2829;
+}
+
+article:nth-of-type(2) div:nth-of-type(1) svg .cls-4 {
+    stroke: #dce3e5;
+    stroke-width: .2em;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+article:nth-of-type(2) div:nth-of-type(1) svg .cls-5 {
+    stroke: #dce3e5;
+    stroke-width: .2em;
+    fill: none;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+}
+
+article:nth-of-type(2) div:nth-of-type(2) svg .cls-1 {
+    fill: #fff;
+}
+
+article:nth-of-type(2) div:nth-of-type(2) .cls-2 {
+    fill: #7b939f;
+}
+
+article:nth-of-type(2) div:nth-of-type(2) .cls-3 {
+    fill: #2b2829;
+}
+
+article:nth-of-type(2) div:nth-of-type(2) .cls-4 {
+    stroke: #dce3e5;
+    stroke-width: .2em;
+    fill: none;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+}
+
+
+/*ANIMATIE*/
+section.strokefill article:first-of-type div:nth-of-type(1) svg .cls-6,
+section.strokefill article:first-of-type div:nth-of-type(2) svg .cls-5,
+section.strokefill article:first-of-type div:nth-of-type(2) svg .cls-4,
+section.strokefill article:first-of-type div:nth-of-type(2) svg .cls-6,
+section.strokefill article:first-of-type div:nth-of-type(2) svg .cls-7,
+section.strokefill article:first-of-type div:nth-of-type(2) svg .cls-8,
+section.strokefill article:nth-of-type(2) div:nth-of-type(1) svg .cls-4,
+section.strokefill article:nth-of-type(2) div:nth-of-type(1) svg .cls-5,
+section.strokefill article:nth-of-type(2) div:nth-of-type(2) .cls-4 {
+    animation: line 5s linear forwards;
+}
+
+section.strokefill article:first-of-type div:nth-of-type(1):hover svg,
+section.strokefill article:first-of-type div:nth-of-type(2):hover svg,
+section.strokefill article:first-of-type div:nth-of-type(2):hover svg,
+section.strokefill article:first-of-type div:nth-of-type(2):hover svg,
+section.strokefill article:first-of-type div:nth-of-type(2):hover svg,
+section.strokefill article:first-of-type div:nth-of-type(2):hover svg,
+section.strokefill article:nth-of-type(2) div:nth-of-type(1):hover svg,
+section.strokefill article:nth-of-type(2) div:nth-of-type(1):hover svg,
+section.strokefill article:nth-of-type(2) div:nth-of-type(2):hover svg {
+    animation: beweeg .75s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes beweeg {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(5deg) scale(1.05);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes line {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/*FOCUS state*/
+a:focus,
+button:focus,
+input:focus {
+    outline: .2em solid #a3ba9a;
+    animation: offset 1s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes offset {
+    0% {
+        outline-offset: 0;
+    }
+
+    50% {
+        outline-offset: .3em;
+    }
+
+    100% {
+        outline-offset: 0;
+    }
+}
+
 @media screen and (min-width: 1024px) {
 
+    header button {
+        display: none !important;
+    }
+
+    header nav {
+        height: 7em;
+        background-color: white;
+    }
+
+    header nav section {
+        left: 0;
+        top: 0;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0)
+    }
+
+    header nav section input {
+        display: none;
+    }
+
+    header nav section ul:nth-of-type(1) {
+        width: 30em;
+        justify-content: center;
+        position: absolute;
+        right: 15em
+    }
+
+    header nav section ul:nth-of-type(1) li a {
+        width: 10em;
+        padding: .5em .1em;
+        margin: 1em;
+    }
+
+    header nav section ul:nth-of-type(2),
+    header nav section ul:nth-of-type(3) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center
+    }
+
+    header nav ul:nth-of-type(2) li a {
+        padding: .5em !important;
+        margin: 1em;
+    }
+
+    header nav ul:nth-of-type(3) {
+        position: absolute;
+        top: 1em;
+        right: 40em
+    }
+
+    header nav ul:nth-of-type(2) {
+        width: 65%;
+        margin: 3em auto;
+        padding: 0;
+        justify-content: space-between !important;
+    }
+
+    header nav ul:nth-of-type(3) li a {
+        font-size: .8em !important;
+        color: var(--text);
+    }
+
+
+    header nav section ul:nth-of-type(2) li a:hover,
+    header nav section ul:nth-of-type(3) li a:hover {
+        background: white;
+        color: black;
+    }
+
+    header nav section ul:nth-of-type(2) li a::after {
+        margin-top: .5em;
+        content: "";
+        display: block;
+        height: .1em;
+        width: 0;
+        background-color: black;
+        transition: .3s ease;
+    }
+
+    header nav section ul:nth-of-type(2) li a:hover::after {
+        width: 100%;
+    }
+
+
+    header nav ul li a span {
+        display: none;
+    }
+
+
     header {
-        height: 108vh;
+        height: 110%;
     }
 
     header article {
@@ -1242,13 +1549,14 @@ main.bosjeBomen section:nth-child(4) a {
         border: .1em solid white;
         padding: 5em 5em 10em;
         top: 11em;
-        margin: 3em
+        margin: 3em 3em 3em 20em
     }
 
 
     main.home section:nth-of-type(1),
     main.home section:nth-of-type(2) {
-        max-width: 50em;
+        width: 90%;
+        max-width: 75em;
         margin: auto;
     }
 
@@ -1262,13 +1570,75 @@ main.bosjeBomen section:nth-child(4) a {
         width: 35vw;
     }
 
+    main section:nth-of-type(6) {
+        width: 90% !important;
+        max-width: 75em !important;
+    }
+
+    main section:nth-of-type(6) article {
+        margin: .5em;
+    }
+
+    main section:nth-of-type(6) article:first-of-type a {
+        width: 30em;
+        height: 20em;
+        margin: auto auto auto 0;
+    }
+
+    main section:nth-of-type(6) article:first-of-type a p {
+        top: 15em
+    }
+
+    main section:nth-of-type(6) div {
+        border-radius: .5em .5em 0 0 !important;
+        display: flex
+    }
+
+    main section:nth-of-type(6) h4 {
+        top: 1em !important;
+        width: 100% !important;
+        left: 0 !important;
+    }
+
+    main section:nth-of-type(6) article:nth-of-type(2) a p {
+        left: 2em;
+        top: 6em;
+    }
+
+    main section:nth-of-type(6) article:nth-of-type(3) a p {
+        left: 2em;
+        top: 4.5em;
+    }
+
+    main section:nth-of-type(6) article a {
+        width: 20em;
+        height: 20em;
+        margin: 0;
+        border-radius: 1em !important;
+    }
+
+    main section:nth-of-type(6) article a div.background-img {
+        width: 100%;
+        height: 50%;
+    }
+
     main.bosjeBomen section:first-child {
         top: -2em;
     }
 
-    main.bosjeBomen section:nth-of-type(2) {
+    main.bosjeBomen div section:first-of-type {
+        padding: 6em
+    }
+
+    main.bosjeBomen div section:nth-of-type(2) {
         top: 0em;
-        margin-bottom: 20em
+        margin-bottom: 20em;
+        padding: 10em
+    }
+
+    main.bosjeBomen div section:nth-of-type(2) p {
+        max-width: 50em;
+        margin: auto;
     }
 
     main.bosjeBomen section div:first-of-type {
@@ -1284,8 +1654,44 @@ main.bosjeBomen section:nth-child(4) a {
         width: 15em;
     }
 
-    main.bosjeBomen section:nth-of-type(2) div img {
+    main.bosjeBomen section:nth-of-type(2) div svg {
         width: 12em;
         height: 12em;
     }
+
+    section.svgs {
+        top: -10em !important;
+        margin-bottom: 10em;
+    }
+
+    main.bosjeBomen div.titel {}
+
+    footer div {
+        display: flex;
+        justify-content: space-between;
+        width: 75em;
+        margin: auto;
+    }
+
+    footer div ul {
+        width: 30em;
+    }
+
+    footer div section {
+        width: 30em;
+    }
+
+    footer div section {
+        display: block !important
+    }
+
+    footer section {
+        width: 75em;
+        margin: 1em auto
+    }
+
+    footer section ul {
+        justify-content: space-around;
+    }
+
 }
